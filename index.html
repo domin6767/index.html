@@ -76,14 +76,111 @@
 
 <div id="main-card">
 
+    <!-- START -->
     <div class="step active" id="s0" onclick="startExperience()">
         <span style="font-size: 60px; display:block;">❤️</span>
         <h2 style="font-size: 26px;">Dotknij tutaj, Julka... ✨</h2>
         <p style="color: #ff85a1;">Wiadomość od Domisia</p>
     </div>
 
-    <!-- RESZTA KROKÓW BEZ ZMIAN -->
-    <!-- (dokładnie takie jak u Ciebie, nic nie ruszałem) -->
+    <!-- KROKI 1-12 -->
+    <div class="step" id="s1">
+        <h2>Czy jesteś Julka?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(2)">Tak</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+    <div class="step" id="s2">
+        <h2>Czy jesteś w szoku co się tutaj dzieje?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(3)">Tak</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+    <div class="step" id="s3">
+        <h2>Czy Aktualnie jesteś już w Warszawie?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(4)">Tak</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+    <div class="step" id="s4">
+        <h2>Czy masz chłopaka?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(5)">Tak</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+    <div class="step" id="s5">
+        <h2>Czy twój chłopak ma na imię Dominik?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(6)">Tak</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+    <div class="step" id="s6">
+        <h2>Czy kochasz swojego chłopaka?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(7)">Tak</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+    <div class="step" id="s7">
+        <h2>Czy na pewno kochasz swojego chłopaka?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(8)">Tak</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+    <div class="step" id="s8">
+        <h2>Jak bardzo kochasz swojego chłopaka?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(9)">Najbardziej na świecie!</button>
+            <button class="btn-wrong" onclick="showError()">Nie kocham go</button>
+        </div>
+    </div>
+    <div class="step" id="s9">
+        <h2>Czy chcesz w końcu dowiedzieć się co się tutaj odwala?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(10)">Tak</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+    <div class="step" id="s10">
+        <h2>Czy na pewno chcesz się dowiedzieć o co chodzi?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(11)">Tak, powiedz mi kurde w końcu!</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+    <div class="step" id="s11">
+        <h2>Czy na pewno na pewno na pewno chcesz się dowiedzieć o co chodzi?</h2>
+        <div class="btn-group">
+            <button class="btn-next" onclick="nextStep(12)">Tak kurde Mów!</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
+
+    <!-- KOŃCOWY EKRAN -->
+    <div class="step" id="s12">
+        <span style="font-size: 50px;">🐱</span>
+        <h2>Julka, zostaniesz moją Walentynką?</h2>
+        <div id="final-msg" style="display:none;">
+            <h2 style="font-size: 30px;">Kocham Cię tygrysku! 🐯❤️</h2>
+            <div id="letter" class="letter-body">
+                Może nie jestem jakimś informatykiem wybitnym, ale naprawdę się starałem nad tą stroną. Powiedziałaś mi sama dzisiaj, że zawsze umiem w podrywy, więc w tym roku nie będzie podrywu, tylko pójdę o krok dalej i zrobiłem dla Ciebie tą taką stronę internetową prostą.<br><br>
+                Dzisiaj mija nasz kolejny wspólny miesiąc! Skoro ustaliliśmy tę datę na pierwszego, bo sami w końcu nie wiemy, czy to było przed północą, czy już po – to idealna okazja, żeby Ci podziękować.<br><br>
+                Dziękuję, że zawsze mnie wspierasz i że mogę na Ciebie liczyć. Tak jak ostatnio rozmawialiśmy, mam nadzieję, że wszystko uda się nam zrealizować w życiu, nieważne co będzie i jak będzie. Najważniejsze jest to, że będziemy razem, będziemy się wspólnie uzupełniać i dążyć do wspólnych celów.<br><br>
+                Kocham Ciebie bardzo mocno i mam nadzieję, że uda nam się spędzić razem walentynki, ale o tym jeszcze pogadamy, co nie? 😉
+            </div>
+            <p id="read-more" onclick="showLetter()" style="color:#ff85a1; font-size:12px; cursor:pointer; text-decoration:underline; margin-top:20px;">dotknij tutaj jeżeli chcesz jeszcze coś przeczytać...</p>
+        </div>
+        <div class="btn-group" id="final-btns">
+            <button class="yes-btn" onclick="celebrate()" style="background:#ff4d6d; color:white;">TAK! 🥰</button>
+            <button class="btn-wrong" onclick="showError()">Nie</button>
+        </div>
+    </div>
 
 </div>
 
